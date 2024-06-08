@@ -26,40 +26,40 @@ export default function Features() {
     const [selectedFeature, setSelectedFeature] =
         useState<FeatureType>("Speedy Searching");
     return (
-        <div className="flex items-center py-24 w-full flex-col">
+        <div className="flex items-center lg:py-24 pt-36 lg:px-0 px-8 pb-0 w-full flex-col overflow-x-hidden">
             <h3 className="text-3xl font-rubik font-semibold">Features</h3>
-            <p className="w-[33rem] text-center font-rubik text-grayish_blue text-lg py-8">
+            <p className="lg:w-[33rem] text-center font-rubik text-grayish_blue text-lg py-8">
                 Our aim is to make it quick and easy for you to access your
                 favourite websites. Your bookmarks sync between your devices so
                 you can access them on the go.
             </p>
-            <div className="grid grid-cols-3 border-b-[1px] border-grayish_blue">
+            <div className="lg:grid lg:grid-cols-3 flex flex-col py-2">
                 <button
                     onMouseDown={() => setSelectedFeature("Simple Bookmarking")}
-                    className={`w-64 py-6 border-b-4 transition ${
+                    className={`w-64 py-6 transition ${
                         selectedFeature === "Simple Bookmarking"
-                            ? "border-b-soft_red text-black font-bold"
-                            : "border-transparent text-grayish_blue"
+                            ? "border-b-soft_red text-black font-bold border-b-4"
+                            : " border-b-[1px] border-grayish_blue text-grayish_blue"
                     }`}
                 >
                     Simple Bookmarking
                 </button>
                 <button
                     onMouseDown={() => setSelectedFeature("Speedy Searching")}
-                    className={`w-64 py-6 border-b-4 transition ${
+                    className={`w-64 py-6 transition ${
                         selectedFeature === "Speedy Searching"
-                            ? "border-b-soft_red text-black font-bold"
-                            : "border-transparent text-grayish_blue"
+                            ? "border-b-soft_red text-black font-bold border-b-4"
+                            : " border-b-[1px] border-grayish_blue text-grayish_blue"
                     }`}
                 >
                     Speedy Searching
                 </button>
                 <button
                     onMouseDown={() => setSelectedFeature("Easy Sharing")}
-                    className={`w-64 py-6 border-b-4 transition ${
+                    className={`w-64 py-6 transition ${
                         selectedFeature === "Easy Sharing"
-                            ? "border-b-soft_red text-black font-bold"
-                            : "border-transparent text-grayish_blue"
+                            ? "border-b-soft_red text-black font-bold border-b-4"
+                            : " border-b-[1px] border-grayish_blue text-grayish_blue"
                     }`}
                 >
                     Easy Sharing
@@ -73,18 +73,18 @@ export default function Features() {
 function FeatureSection({ featureType }: { featureType: FeatureType }) {
     const { title, description, image } = data[featureType];
     return (
-        <div className="w-full flex items-center py-16 justify-between lg:pr-36">
-            <div className="relative">
-                <img src={image} alt={`${title} image`} className="pl-52" />
+        <div className="w-full flex items-center py-16 justify-between lg:pr-36 lg:flex-row flex-col">
+            <div className="relative lg:w-fit w-[100vw] flex lg:justify-normal justify-center">
+                <img src={image} alt={`${title} image`} className="lg:pl-52 lg:w-fit w-[80vw]" />
                 <div className="absolute w-[110%] h-[85%] top-[6.5rem] -z-10 flex">
                     <div className="h-full flex-grow bg-soft_blue"></div>
                     <div className="h-full aspect-square rounded-full -translate-x-[50%] bg-soft_blue"></div>
                 </div>
             </div>
-            <div className="flex flex-col w-[25rem]">
-                <h3 className="text-3xl font-semibold font-rubik">{title}</h3>
-                <p className="leader-8 font-rubik text-grayish_blue py-6">{description}</p>
-                <button className="w-fit rounded-md bg-soft_blue text-white font-rubik px-5 py-3 text-sm">More info</button>
+            <div className="flex flex-col lg:w-[25rem] px-8 lg:py-0 pt-28">
+                <h3 className="text-3xl font-semibold font-rubik lg:text-left text-center">{title}</h3>
+                <p className="leader-8 font-rubik text-grayish_blue py-6 lg:text-left text-center">{description}</p>
+                <button className="w-fit rounded-md bg-soft_blue text-white font-rubik px-5 py-3 text-sm lg:block hidden">More info</button>
             </div>
         </div>
     );

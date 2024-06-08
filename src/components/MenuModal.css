@@ -1,0 +1,51 @@
+.init {
+    display: none;
+}
+
+.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: hsla(229, 31%, 21%, 0.95);
+    z-index: 20;
+    @apply lg:hidden  flex flex-col gap-4 px-8 overflow-hidden;
+    animation-name: openAnimation;
+    animation-duration: 0.5s;
+}
+
+.close {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: -10rem;
+    height: 0;
+    z-index: 20;
+    background-color: hsla(229, 31%, 21%, 0.95);
+    @apply lg:hidden  flex flex-col gap-4 px-8 overflow-hidden;
+    animation-name: closeAnimation;
+    animation-duration: 0.5s;
+}
+
+@keyframes openAnimation {
+    0% {
+        height: 0;
+        top: -10rem;
+    }
+    100% {
+        top: 0;
+        height: 100vh;
+    }
+}
+
+@keyframes closeAnimation {
+    0% {
+        height: 100%;
+        top: 0;
+    }
+    100% {
+        top: -10rem;
+        height: 0;
+    }
+}

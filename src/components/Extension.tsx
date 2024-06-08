@@ -4,18 +4,18 @@ import OperaIcon from "/images/logo-opera.svg";
 
 export default function Extension() {
     return (
-        <div className="flex flex-col justify-center py-24">
+        <div className="flex flex-col justify-center py-24 lg:px-0 px-8">
             <div className="flex flex-col font-rubik items-center">
                 <h3 className="text-3xl font-rubik font-medium text-center">
                     Download the extension
                 </h3>
-                <p className="font-rubik text-grayish_blue w-[30rem] py-6 text-center">
+                <p className="font-rubik text-grayish_blue lg:w-[30rem] py-6 text-center">
                     We’ve got more browsers in the pipeline. Please do let us
                     know if you’ve got a favourite you’d like us to prioritize.
                 </p>
             </div>
-            <div className="grid grid-cols-3 gap-8 py-24">
-                <div className="flex flex-col items-center shadow-lg rounded-lg w-[15rem] -translate-y-[2.5rem]">
+            <div className="lg:grid lg:grid-cols-3 gap-8 py-24 flex flex-col items-center">
+                <div className="flex flex-col items-center shadow-lg rounded-lg w-4/5 lg:w-[15rem] -translate-y-[2.5rem]">
                     <div className="w-full flex flex-col items-center justify-center py-8">
                         <img
                             src={ChromeIcon}
@@ -35,7 +35,7 @@ export default function Extension() {
                         </button>
                     </div>
                 </div>
-                <div className="flex flex-col items-center shadow-lg rounded-lg w-[15rem]">
+                <div className="flex flex-col items-center shadow-lg rounded-lg w-4/5 lg:w-[15rem]">
                     <div className="w-full flex flex-col items-center justify-center py-8">
                         <img
                             src={FirefoxIcon}
@@ -55,7 +55,7 @@ export default function Extension() {
                         </button>
                     </div>
                 </div>
-                <div className="flex flex-col items-center shadow-lg rounded-lg w-[15rem] translate-y-[2.5rem]">
+                <div className="flex flex-col items-center shadow-lg rounded-lg w-4/5 lg:w-[15rem] translate-y-[2.5rem]">
                     <div className="w-full flex flex-col items-center justify-center py-8">
                         <img
                             src={OperaIcon}

@@ -7,7 +7,7 @@ import {
 
 export default function FAQ() {
     return (
-        <div className="flex flex-col w-[30rem]">
+        <div className="flex flex-col lg:w-[30rem] lg:px-0 px-8">
             <h3 className="text-3xl font-rubik font-medium text-center">
                 Frequently Asked Questions
             </h3>
